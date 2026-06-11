@@ -3,7 +3,6 @@ from openfile import select_file
 import time
 
 def openimg():
-    #open an iamge
     img_path=select_file()
     img=cv2.imread(img_path)
     cv2.imshow("image",img)
