@@ -3,7 +3,7 @@ from openfile import select_file
 import time
 
 def openimg():
-    #open a iamge
+    #open an iamge
     img_path=select_file()
     img=cv2.imread(img_path)
     cv2.imshow("image",img)
@@ -15,9 +15,10 @@ def saveimg(img):
     cv2.imwrite(filename,img)
     print(f"已保存：{filename}")
 
-img,key=openimg()
+if __name__ == "__main__":
+    img,key=openimg()
 
-if key == 13:
-    saveimg(img)
+    if key == 13:
+        saveimg(img)
 
-cv2.destroyAllWindows()                   
+    cv2.destroyAllWindows()                   
